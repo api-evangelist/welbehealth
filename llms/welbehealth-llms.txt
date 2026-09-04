@@ -1,0 +1,36 @@
+# WelbeHealth
+
+> WelbeHealth is a California public benefit company and provider-sponsored health plan that
+> operates Programs of All-Inclusive Care for the Elderly (PACE). It is both the insurer and the
+> care provider for frail seniors who qualify for nursing-home level of care, coordinating and
+> paying for all medical, behavioral, pharmacy, home care, rehabilitation, transportation and
+> social services through interdisciplinary teams at PACE centers across California. Funded by
+> capitated Medicare and Medicaid (Medi-Cal) payments. Founded 2015; headquartered in Menlo Park,
+> California; converted to public benefit company status in 2022.
+
+## API status
+
+WelbeHealth publishes **no public API**. As of 2026-09-04, API Evangelist probed every
+WelbeHealth-controlled host and found no developer portal, no API documentation, no
+machine-readable contract (OpenAPI, Swagger, GraphQL, AsyncAPI, WSDL, gRPC, OGC), no MCP server,
+no A2A agent card and no `/.well-known/` discovery surface. There is no `github.com/welbehealth`
+organization. `api.`, `developer.`, `docs.` and `fhir.` subdomains do not resolve.
+
+## Company
+
+- [WelbeHealth](https://welbehealth.com/): Company website.
+- [About WelbeHealth](https://welbehealth.com/about/): Mission, leadership and public benefit company status.
+- [PACE](https://welbehealth.com/pace/): What the Program of All-Inclusive Care for the Elderly covers.
+- [Our Providers](https://welbehealth.com/our-providers/): Care team and provider network.
+- [Partners](https://welbehealth.com/partners/): Referral and community partner information.
+- [FAQs](https://welbehealth.com/faqs/): Participant and caregiver questions.
+- [News](https://welbehealth.com/news/): Company news and announcements.
+- [Contact](https://welbehealth.com/contact/): Phone and enrollment contact.
+- [Privacy Policy](https://welbehealth.com/privacy-policy/): Website privacy policy.
+- [Participant Rights and Notices](https://welbehealth.com/participant-rights-and-notices/): Participant rights, non-discrimination and required notices.
+
+## API Evangelist artifacts
+
+- [apis.yml](apis.yml): APIs.json profile for WelbeHealth.
+- [Domain security probe](security/welbehealth-domain-security.yml): TLS, HSTS, DNSSEC, CAA, SPF and DMARC observations.
+- [Well-known probe](well-known/welbehealth-well-known.yml): Recorded absence of every `/.well-known/` discovery document.

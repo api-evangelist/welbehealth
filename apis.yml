@@ -1,7 +1,15 @@
 aid: welbehealth
 name: WelbeHealth
-description: 'WelbeHealth is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: WelbeHealth is a California public benefit company and provider-sponsored health plan operating Programs
+    of All-Inclusive Care for the Elderly (PACE). Founded in 2015 and headquartered in Menlo Park, California,
+    it is both insurer and care provider for frail seniors who qualify for nursing-home level of care, coordinating
+    and paying for all medical, behavioral, pharmacy, home care, rehabilitation, transportation and social
+    services through interdisciplinary teams at PACE centers across California including Fresno, Long Beach,
+    Los Angeles, Modesto, North Hollywood, Pasadena, Rosemead, Stockton and the Inland Empire, funded by
+    capitated Medicare and Medi-Cal payments. In 2022 it became the first PACE organization to convert to
+    public benefit company status. API Evangelist finds no public developer program, no API documentation
+    and no machine-readable contract on any WelbeHealth-controlled host as of September 2026.
+image: https://welbehealth.com/wp-content/uploads/2022/03/WelbeHealth_Logo.png
 url: https://raw.githubusercontent.com/api-evangelist/welbehealth/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +20,15 @@ created: '2026-09-04'
 modified: '2026-09-04'
 tags:
 - Company
+- Health Care
+- Healthcare
+- Health Plans
+- Senior Care
+- PACE
+- Medicare
+- Medicaid
+- Managed Care
+- Public Benefit Company
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +37,48 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.hiive.com/securities/welbehealth-stock
+  url: https://welbehealth.com/
+- type: About
+  url: https://welbehealth.com/about/
+- type: Blog
+  url: https://welbehealth.com/news/
+- type: BlogRSS
+  url: https://welbehealth.com/feed/
+- type: Support
+  url: https://welbehealth.com/contact/
+- type: FAQ
+  url: https://welbehealth.com/faqs/
+- type: PrivacyPolicy
+  url: https://welbehealth.com/privacy-policy/
+- type: Partners
+  url: https://welbehealth.com/partners/
+- type: DomainSecurity
+  url: security/welbehealth-domain-security.yml
+- type: LLMsTxt
+  url: llms/welbehealth-llms.txt
+x-enrichment:
+  date: '2026-09-04'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    WelbeHealth is a PACE care-delivery organization and provider-sponsored health plan, not a
+    software vendor; its only public web surfaces are a WordPress marketing site, a Phenom-hosted
+    careers SPA and a broker login, and welbehealth.com returns 404 on /developers, /api, /fhir,
+    /openapi.json and every /.well-known/ path, with no api./developer./docs./fhir. subdomain
+    resolving and no github.com/welbehealth organization.
+  evidence:
+  - url: https://welbehealth.com/developers
+    status: 404
+  - url: https://welbehealth.com/openapi.json
+    status: 404
+  - url: https://welbehealth.com/.well-known/api-catalog
+    status: 404
+  - url: https://api.welbehealth.com/
+    status: 0
+  - url: https://github.com/welbehealth
+    status: 404
+  checked: '2026-09-04'

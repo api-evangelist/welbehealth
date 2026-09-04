@@ -1,0 +1,58 @@
+generated: '2026-09-04'
+method: probed
+source: live GET of the named /.well-known/ path list on every host in apis.yml
+note: >-
+  No WelbeHealth-controlled host serves any /.well-known/ discovery document. welbehealth.com and
+  www.welbehealth.com (WordPress) return a genuine 404 on every probed path. careers.welbehealth.com
+  is a Phenom People careers SPA that answers HTTP 200 with the same ~1.1MB HTML shell for EVERY
+  path, including a negative-control path that cannot exist — its 200s are catch-all responses, NOT
+  served documents, and are recorded here as misses. No WellKnown, SecurityTxt, APICatalog or
+  AgentCard pointer is emitted, because nothing was actually served.
+hit_count: 0
+path_echo_control: failed
+soft_404_control:
+  host: careers.welbehealth.com
+  path: /.well-known/welbehealth-negative-control-7f3ab91c.json
+  status: 200
+  bytes: 1139656
+  verdict: catch-all SPA shell; every 200 on this host discarded
+hosts:
+- host: https://welbehealth.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/apis.json, status: 404}
+  - {path: /.well-known/aauth-resource.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /apis.json, status: 404}
+  - {path: /apis.yml, status: 404}
+- host: https://www.welbehealth.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/apis.json, status: 404}
+  - {path: /.well-known/aauth-resource.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://careers.welbehealth.com
+  note: catch-all SPA; all 200s below are the same HTML shell, not documents
+  documents:
+  - {path: /.well-known/security.txt, status: 200, served_document: false}
+  - {path: /.well-known/openid-configuration, status: 200, served_document: false}
+  - {path: /.well-known/oauth-authorization-server, status: 200, served_document: false}
+  - {path: /.well-known/oauth-protected-resource, status: 200, served_document: false}
+  - {path: /.well-known/api-catalog, status: 200, served_document: false}
+  - {path: /.well-known/ai-plugin.json, status: 200, served_document: false}
+  - {path: /.well-known/apis.json, status: 200, served_document: false}
+  - {path: /.well-known/aauth-resource.json, status: 200, served_document: false}
+  - {path: /.well-known/agent-card.json, status: 200, served_document: false}
+  - {path: /.well-known/agent.json, status: 200, served_document: false}
